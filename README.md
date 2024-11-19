@@ -51,7 +51,7 @@ git checkout -b release-3.72.0-04 origin/release-3.72.0-04 --
 Then build using the included Maven wrapper script. For example:
 
 ```shell
-./mvnw clean install -Dpublic
+./mvnw clean install -Dpublic -DskipTests
 ```
 
 The `public` property is required outside of Sonatype's internal infrastructure.
