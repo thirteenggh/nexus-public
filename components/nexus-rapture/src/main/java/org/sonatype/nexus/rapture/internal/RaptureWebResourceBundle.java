@@ -302,9 +302,6 @@ public class RaptureWebResourceBundle
 
       @Override
       protected byte[] generate() throws IOException {
-
-        log.info("thgy> state: {}", gson.toJson(getState()));
-
         return render("app.vm", new TemplateParameters()
                 .set("baseUrl", BaseUrlHolder.getRelativePath())
                 .set("debug", isDebug())

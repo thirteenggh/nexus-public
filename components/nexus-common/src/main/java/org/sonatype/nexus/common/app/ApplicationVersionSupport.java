@@ -90,6 +90,11 @@ public abstract class ApplicationVersionSupport
   }
 
   @Override
+  public String getEdition() {
+    return "thgy";
+  }
+
+  @Override
   public String getBrandedEditionAndVersion() {
     String edition = getEdition();
     String version = getVersion();
