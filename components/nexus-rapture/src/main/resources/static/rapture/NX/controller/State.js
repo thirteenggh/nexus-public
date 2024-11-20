@@ -200,6 +200,9 @@ Ext.define('NX.controller.State', {
             valueToSet = Ext.ClassManager.instantiateByAlias('nx.state.' + key, valueToSet);
           }
         }
+
+        console.log('thgy => Setting value for key:', key, 'value:', valueToSet, 'hash:', hash);
+
         me.setValue(key, valueToSet, hash);
       });
     }
@@ -433,6 +436,7 @@ Ext.define('NX.controller.State', {
   refreshNow: function () {
     var me = this;
 
+    console.log('thgy => rapture_State_get url:', NX.direct.api.POLLING_URLS.rapture_State_get);
     // directly query for state
     Ext.Ajax.request({
       url: NX.direct.api.POLLING_URLS.rapture_State_get,
