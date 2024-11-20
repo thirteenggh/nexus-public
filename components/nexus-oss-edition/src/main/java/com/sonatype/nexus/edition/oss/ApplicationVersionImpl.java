@@ -31,7 +31,7 @@ public class ApplicationVersionImpl
 
   @Override
   public String getEdition() {
-    return "OSS";
+    return "thgy";
   }
 
 }

@@ -160,9 +160,6 @@ Ext.define('NX.State', {
   getBrandedEditionAndVersion: function() {
     var edition = this.getEdition(),
         version = this.getVersion();
-
-    console.log('thgy> edition: ' + edition + ' ; version: ' + version);
-    
     return edition + ' ' + version;
   },
 

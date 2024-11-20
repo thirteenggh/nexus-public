@@ -55,9 +55,6 @@ public class StatusStateContributor
 
   private Object calculateStatus() {
     StatusXO result = new StatusXO();
-
-    log.info("thgy> applicationVersion: {}", applicationVersion);
-
     result.setVersion(applicationVersion.getVersion());
     result.setEdition(applicationVersion.getEdition());
     result.setBuildRevision(applicationVersion.getBuildRevision());

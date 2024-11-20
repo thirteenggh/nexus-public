@@ -67,7 +67,6 @@ Ext.define('NX.app.Loader', {
 
     me.controllers = Ext.create('Ext.util.MixedCollection');
 
-    console.log('thgy> config.state', config.state);
     // attach initial application state
     NX.app.state = config.state;
     NX.app.debug = false;
