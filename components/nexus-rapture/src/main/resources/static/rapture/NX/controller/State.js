@@ -106,7 +106,13 @@ Ext.define('NX.controller.State', {
     // set uiSettings by the end so it does not start state pulling till all initial state hashes are known
     // this avoids unnecessary sending of state from server
     delete NX.app.state['uiSettings'];
+
+    console.log('thgy> NX.app.state:', NX.app.state);
+
     NX.State.setValues(NX.app.state);
+
+    console.log('thgy> uiSettings:', uiSettings);
+
     NX.State.setValues({ uiSettings: uiSettings });
 
     //<if debug>
@@ -201,7 +207,9 @@ Ext.define('NX.controller.State', {
           }
         }
 
-        console.log('thgy => Setting value for key:', key, 'value:', valueToSet, 'hash:', hash);
+        if (valueToSet.edition && valueToSet.version) {
+          console.log('thgy> Setting value for key:', key, 'value:', valueToSet, 'hash:', hash);
+        }
 
         me.setValue(key, valueToSet, hash);
       });
@@ -436,7 +444,6 @@ Ext.define('NX.controller.State', {
   refreshNow: function () {
     var me = this;
 
-    console.log('thgy => rapture_State_get url:', NX.direct.api.POLLING_URLS.rapture_State_get);
     // directly query for state
     Ext.Ajax.request({
       url: NX.direct.api.POLLING_URLS.rapture_State_get,

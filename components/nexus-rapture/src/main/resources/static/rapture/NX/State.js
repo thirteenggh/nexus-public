@@ -161,7 +161,7 @@ Ext.define('NX.State', {
     var edition = this.getEdition(),
         version = this.getVersion();
 
-    console.log('thgy => edition: ' + edition + ' ; version: ' + version);
+    console.log('thgy> edition: ' + edition + ' ; version: ' + version);
     
     return edition + ' ' + version;
   },
