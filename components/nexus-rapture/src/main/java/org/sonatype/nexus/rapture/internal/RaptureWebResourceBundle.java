@@ -104,9 +104,6 @@ public class RaptureWebResourceBundle
     this.applicationVersion = checkNotNull(applicationVersion);
     this.servletRequestProvider = checkNotNull(servletRequestProvider);
     this.stateComponentProvider = checkNotNull(stateComponentProvider);
-
-    log.info("thgy> stateComponentProvider: {}", stateComponentProvider.get().getState(Maps.<String, String>newHashMap()));
-
     this.templateHelper = checkNotNull(templateHelper);
     this.pluginDescriptors = checkNotNull(pluginDescriptors);
     this.extJsPluginDescriptors = checkNotNull(extJsPluginDescriptors);

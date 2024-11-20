@@ -86,11 +86,15 @@ public abstract class ApplicationVersionSupport
 
   @Override
   public String getVersion() {
+    log.info("thgy> getVersion: {}", property(VERSION));
+    
     return property(VERSION);
   }
 
   @Override
   public String getEdition() {
+    log.info("thgy> getEdition: {}", "thgy");
+
     return "thgy";
   }
 
