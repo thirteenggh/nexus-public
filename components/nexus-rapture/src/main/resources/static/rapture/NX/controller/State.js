@@ -98,7 +98,7 @@ Ext.define('NX.controller.State', {
     var uiSettings = NX.app.state['uiSettings'];
 
     NX.State.setBrowserSupported(
-        !Ext.isIE || (Ext.isIE9p && Ext.isIE11m)
+      !Ext.isIE || (Ext.isIE9p && Ext.isIE11m)
     );
     NX.State.setValue('debug', NX.app.debug);
     NX.State.setValue('receiving', false);
@@ -128,9 +128,9 @@ Ext.define('NX.controller.State', {
     return this.receiving;
   },
 
-  getValue: function(key, defaultValue) {
+  getValue: function (key, defaultValue) {
     var model = this.getStore('State').getById(key),
-        value;
+      value;
 
     if (model) {
       value = model.get('value');
@@ -149,9 +149,9 @@ Ext.define('NX.controller.State', {
    */
   setValue: function (key, value, hash) {
     var me = this,
-        store = me.getStore('State'),
-        model = store.getById(key),
-        hasValue = Ext.isDefined(value) && value !== null;
+      store = me.getStore('State'),
+      model = store.getById(key),
+      hasValue = Ext.isDefined(value) && value !== null;
 
     if (!hasValue && model) {
       store.remove(model);
@@ -191,7 +191,7 @@ Ext.define('NX.controller.State', {
 
   setValues: function (map) {
     var me = this,
-        hash, valueToSet;
+      hash, valueToSet;
 
     if (map) {
       Ext.Object.each(map, function (key, value) {
@@ -202,7 +202,7 @@ Ext.define('NX.controller.State', {
         }
         if (Ext.isDefined(valueToSet)) {
           if (!Ext.isPrimitive(valueToSet) && !Ext.isArray(valueToSet)
-              && Ext.ClassManager.getByAlias('nx.state.' + key)) {
+            && Ext.ClassManager.getByAlias('nx.state.' + key)) {
             valueToSet = Ext.ClassManager.instantiateByAlias('nx.state.' + key, valueToSet);
           }
         }
@@ -230,7 +230,7 @@ Ext.define('NX.controller.State', {
   },
 
   onEntryRemoved: function (store, models) {
-    models.forEach(function(model) {
+    models.forEach(function (model) {
       this.notifyChange(model.get('key'), undefined, model.get('value'));
     }, this);
   },
@@ -253,7 +253,7 @@ Ext.define('NX.controller.State', {
    */
   onUiSettingsChanged: function (uiSettings, oldUiSettings) {
     var me = this,
-        newStatusInterval, newStatusIntervalMs, oldStatusIntervalMs;
+      newStatusInterval, newStatusIntervalMs, oldStatusIntervalMs;
 
     uiSettings = uiSettings || {};
     oldUiSettings = oldUiSettings || {};
@@ -357,12 +357,12 @@ Ext.define('NX.controller.State', {
    */
   onSuccess: function (event) {
     var me = this,
-        serverId = me.getValue('serverId'),
-        clusterId = me.getValue('clusterId'),
-        state = event.data.data,
-        clustered = Ext.isDefined(state.nodes) && state.nodes.value.enabled,
-        oldClusterId = state.clusterId ? state.clusterId.value : clusterId,
-        oldServerId = state.serverId ? state.serverId.value : serverId;
+      serverId = me.getValue('serverId'),
+      clusterId = me.getValue('clusterId'),
+      state = event.data.data,
+      clustered = Ext.isDefined(state.nodes) && state.nodes.value.enabled,
+      oldClusterId = state.clusterId ? state.clusterId.value : clusterId,
+      oldServerId = state.serverId ? state.serverId.value : serverId;
 
     me.receiving = true;
 
@@ -374,8 +374,8 @@ Ext.define('NX.controller.State', {
 
     NX.State.setValue('receiving', true);
 
-    if ( (clustered && !me.reloadWhenServerIdChanged(clusterId, oldClusterId)) ||
-        (!clustered && !me.reloadWhenServerIdChanged(serverId, oldServerId)) ) {
+    if ((clustered && !me.reloadWhenServerIdChanged(clusterId, oldClusterId)) ||
+      (!clustered && !me.reloadWhenServerIdChanged(serverId, oldServerId))) {
       me.setValues(state);
     }
     // TODO: Fire global refresh event
@@ -415,18 +415,18 @@ Ext.define('NX.controller.State', {
           // FIXME: i18n
           // Show the UI with a modal dialog error
           NX.Dialogs.showError(
-              'Server disconnected',
-              'There is a problem communicating with the server',
-              {
-                buttonText: {
-                  ok: 'Retry'
-                },
+            'Server disconnected',
+            'There is a problem communicating with the server',
+            {
+              buttonText: {
+                ok: 'Retry'
+              },
 
-                fn: function () {
-                  // retry after the dialog is dismissed
-                  me.statusProvider.connect();
-                }
+              fn: function () {
+                // retry after the dialog is dismissed
+                me.statusProvider.connect();
               }
+            }
           );
         }
       }
@@ -448,7 +448,7 @@ Ext.define('NX.controller.State', {
     Ext.Ajax.request({
       url: NX.direct.api.POLLING_URLS.rapture_State_get,
       scope: me,
-      success: function(response) {
+      success: function (response) {
         var text = response && response.responseText;
 
         if (text != null) {
@@ -487,13 +487,13 @@ Ext.define('NX.controller.State', {
     if (oldServerId && (serverId !== oldServerId) && !Ext.String.startsWith(serverId, 'ignore')) {
       // FIXME: i18n
       NX.Dialogs.showInfo(
-          'Server restarted',
-          'Application will be reloaded as server has been restarted',
-          {
-            fn: function () {
-              NX.global.location.reload();
-            }
+        'Server restarted',
+        'Application will be reloaded as server has been restarted',
+        {
+          fn: function () {
+            NX.global.location.reload();
           }
+        }
       );
       return true;
     }

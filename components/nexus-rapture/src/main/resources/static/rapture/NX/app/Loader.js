@@ -67,6 +67,7 @@ Ext.define('NX.app.Loader', {
 
     me.controllers = Ext.create('Ext.util.MixedCollection');
 
+    console.log('thgy> config.state', config.state);
     // attach initial application state
     NX.app.state = config.state;
     NX.app.debug = false;
@@ -123,7 +124,7 @@ Ext.define('NX.app.Loader', {
    */
   applyPluginConfig: function (className) {
     var me = this,
-        config;
+      config;
 
     //<if debug>
     me.logDebug('Applying plugin config:', className);
@@ -166,7 +167,7 @@ Ext.define('NX.app.Loader', {
    * @param {String|Object} config
    * @return {Object} controller configuration
    */
-  defineController: function(config) {
+  defineController: function (config) {
     // simple definition of controller class-name
     if (Ext.isString(config)) {
       return {
@@ -188,7 +189,7 @@ Ext.define('NX.app.Loader', {
     // require or normalize 'active' parameter
     if (Ext.isBoolean(config.active)) {
       var flag = config.active;
-      config.active = function() {
+      config.active = function () {
         return flag;
       };
     }
