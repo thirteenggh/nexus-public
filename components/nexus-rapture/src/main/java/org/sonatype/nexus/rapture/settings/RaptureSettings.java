@@ -22,7 +22,7 @@ import javax.validation.constraints.NotBlank;
  */
 public class RaptureSettings
 {
-  public static final String DEFAULT_TITLE = "Sonatype Nexus Repository";
+  public static final String DEFAULT_TITLE = "私有弹性云计算软件平台";
 
   public static final boolean DEFAULT_DEBUG_ALLOWED = true;
 
