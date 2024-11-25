@@ -15,70 +15,70 @@ import React from 'react';
 export default {
   WELCOME: {
     MENU: {
-      text: 'Welcome'
+      text: '欢迎'
     },
     ACTIONS: {
       SYSTEM_HEALTH: {
-        title: 'System Health',
-        subTitle: 'View system status checks',
+        title: '系统健康',
+        subTitle: '查看系统状态',
       },
       CLEANUP_POLICIES: {
-        title: 'Cleanup Policies',
-        subTitle: 'Review component removal policies',
+        title: '清理策略',
+        subTitle: '管理清理策略',
       },
       BROWSE: {
-        title: 'Browse',
-        subTitle: 'Browse my repositories',
+        title: '浏览',
+        subTitle: '浏览存储库',
       },
       SEARCH: {
-        title: 'Search',
-        subTitle: 'Search for new components',
+        title: '搜索',
+        subTitle: '搜索存储库',
       },
       RELEASE_NOTES: {
-        title: 'Release Notes',
-        subTitle: 'See what\'s new',
+        title: '发布说明',
+        subTitle: '查看最新版本',
       },
       DOCUMENTATION: {
-        title: 'Documentation',
-        subTitle: 'Visit our help site',
+        title: '文档',
+        subTitle: '查看文档',
       },
       COMMUNITY: {
-        title: 'Community',
-        subTitle: 'Ask and answer questions',
+        title: '社区',
+        subTitle: '社区反馈',
       },
       CONNECT: {
-        title: 'Connect',
-        subTitle: 'Connect to a repository',
+        title: '连接',
+        subTitle: '连接到存储库',
       },
     },
     CONNECT_MODAL: {
-      TITLE: 'Obtaining a Repository URL',
-      FIRST_STEP_TEXT: <>In the <em>Repositories</em> table, select the <em>Copy</em> button for the repository you wish to connect.</>,
-      SECOND_STEP_TEXT: 'A modal with the repository\'s direct URL will appear; copy this URL to use as needed. The modal also contains a link to our help documentation to get more information on how to connect to your repository.'
+      TITLE: '获取存储库 URL',
+      FIRST_STEP_TEXT: <>在<em>存储库</em>表中，<em>复制</em>您想要连接的存储库的URL。</>,
+      SECOND_STEP_TEXT: '带有存储库URL的模式；复制此URL以供需要时使用。该模式还包含指向我们帮助文档的链接，以获取有关如何连接到存储库的更多信息。'
     },
     USAGE: {
       MENU: {
-        TEXT: 'Usage'
+        TEXT: '用法'
       },
       TOTAL_COMPONENTS: {
-        TITLE: 'Total components'
+        TITLE: '所有组件'
       },
       UNIQUE_LOGINS: {
         TITLE: 'Unique logins',
         SUB_TITLE: 'Past 30 days'
       },
       PEAK_REQUESTS_PER_MINUTE: {
-        TITLE: 'Peak requests per minute',
+        TITLE: '每分钟峰值请求数',
         SUB_TITLE: 'Past 24 hours'
       },
       PEAK_REQUESTS_PER_DAY: {
-        TITLE: 'Peak requests per day',
+        TITLE: '每日峰值请求数',
         SUB_TITLE: 'Past 30 days'
       },
       CIRCUIT_B: {
         TOTAL_COMPONENTS: {
-          TITLE: 'Total Components',
-          SUB_TITLE: 'Current',
+          TITLE: '所有组件',
+          SUB_TITLE: '当前',
           HIGHEST_RECORDED_COUNT: 'Highest Recorded Count (30 days)',
           METRIC_NAME: 'component_total_count',
           METRIC_NAME_PRO_POSTGRESQL: 'component_total_count',

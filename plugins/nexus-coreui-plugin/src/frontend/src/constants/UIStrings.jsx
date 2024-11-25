@@ -135,15 +135,15 @@ export default {
   },
 
   ANALYZE_APPLICATION: {
-    HEADER: 'Analyze Application',
-    MAIN: 'Application analysis performs a deep inspection of this application, identifying potential risks.<br/> More information is available here <a href=\"http://links.sonatype.com/products/insight/ac/home\">here</a>',
+    HEADER: '程序分析',
+    MAIN: '对程序进行深入分析，识别潜在风险。<br/> 更多信息请参见<a href=\"http://links.sonatype.com/products/insight/ac/home\">此处</a>',
     EMAIL: {
-      LABEL: 'Email address',
-      DESCRIPTION: 'The address where the summary report will be sent'
+      LABEL: '邮箱地址',
+      DESCRIPTION: '摘要报告的发送地址'
     },
     PASSWORD: {
-      LABEL: 'Report password',
-      DESCRIPTION: 'A password to gain access to the detailed report'
+      LABEL: '报告密码',
+      DESCRIPTION: '获取详细报告的密码'
     },
     PACKAGES: {
       LABEL: 'Proprietary packages',
