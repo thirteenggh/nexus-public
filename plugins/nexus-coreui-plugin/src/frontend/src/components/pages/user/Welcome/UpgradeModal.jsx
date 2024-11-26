@@ -51,7 +51,7 @@ export default function UpgradeModal() {
       </header>
       <div className="nx-modal-content">
         <img className="modal-logo"
-                 src={ExtJS.urlOf("static/rapture/resources/images/sonatype-repository-logo.svg")}
+                 src={ExtJS.urlOf("static/rapture/resources/images/tianhe-repository-logo.svg")}
                  alt="Sonatype Nexus Repository logo"/>
         <NxH3>{ABOUT.TITLE}</NxH3>
         <p>{ABOUT.DESCRIPTION}</p>

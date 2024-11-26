@@ -60,11 +60,11 @@ Ext.define('NX.controller.Main', {
         variants: ['x16', 'x100']
       },
       'new-nexus-black': {
-        file: 'sonatype-repository-icon.svg',
+        file: 'tianhe-repository-icon.svg',
         variants: ['x16', 'x100']
       },
       'sonatype': {
-        file: 'sonatype.png',
+        file: 'tianhe.png',
         variants: ['x16', 'x24', 'x32', 'x48', 'x100']
       }
     });

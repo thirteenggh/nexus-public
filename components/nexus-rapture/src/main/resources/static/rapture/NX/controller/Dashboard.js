@@ -41,7 +41,7 @@ Ext.define('NX.controller.Dashboard', {
       view: 'NX.view.dashboard.Welcome',
       text: NX.I18n.get('Dashboard_Title'),
       iconConfig: {
-        file: 'sonatype.png',
+        file: 'tianhe.png',
         variants: ['x16', 'x32']
       },
       weight: 10,

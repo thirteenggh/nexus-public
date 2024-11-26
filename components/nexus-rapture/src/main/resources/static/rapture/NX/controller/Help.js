@@ -77,7 +77,7 @@ Ext.define('NX.controller.Help', {
         variants: ['x16', 'x32']
       },
       'help-guides': {
-        file: 'sonatype.png',
+        file: 'tianhe.png',
         variants: ['x16', 'x32']
       }
     });

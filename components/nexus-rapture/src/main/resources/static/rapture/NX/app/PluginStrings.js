@@ -56,7 +56,7 @@ Ext.define('NX.app.PluginStrings', {
     Header_Health_Tooltip: '系统状态',
     Header_QuickSearch_Empty: '搜索组件',
     Header_QuickSearch_Tooltip: '根据关键词快速搜索',
-    Header_Refresh_Tooltip: '刷新当然界面和数据',
+    Header_Refresh_Tooltip: '刷新当前界面和数据',
     Refresh_Message: '已刷新',
     Header_UserMode_Title: '用户',
     User_Tooltip: '您好{0}，在此管理你的账户',

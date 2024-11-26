@@ -108,7 +108,7 @@ window.plugins.push({
       view: Welcome,
       ...UIStrings.WELCOME.MENU,
       iconConfig: {
-        file: 'sonatype.png',
+        file: 'tianhe.png',
         variants: ['x16', 'x32']
       },
       weight: 10,

@@ -37,7 +37,7 @@ Ext.define('NX.view.header.Logo', {
    * @protected
    */
   initComponent: function() {
-    this.setSrc(NX.util.Url.relativePath + '/static/rapture/resources/icons/x32/sonatype-repository-icon-reverse.svg');
+    this.setSrc(NX.util.Url.relativePath + '/static/rapture/resources/icons/x32/tianhe-repository-icon-reverse.svg');
     this.callParent();
   }
 });

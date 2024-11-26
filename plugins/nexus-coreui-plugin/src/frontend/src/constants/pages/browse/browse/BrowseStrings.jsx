@@ -13,11 +13,11 @@
 export default {
   BROWSE: {
     MENU: {
-      text: 'Browse',
-      description: 'Browse assets and components',
+      text: '存储库',
+      description: '浏览存储库中的组件和资产',
     },
     TREE_TITLE: 'View Assets/Components for',
-    TREE_EMPTY_MESSAGE: 'No component/assets found in repository',
+    TREE_EMPTY_MESSAGE: '存储库中未找到组件或资产',
     LIST: {
       COLUMNS: {
         NAME: 'Name',

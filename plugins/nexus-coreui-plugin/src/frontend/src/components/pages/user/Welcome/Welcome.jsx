@@ -114,7 +114,7 @@ export default function Welcome() {
               <img className="nxrm-welcome__logo"
                    alt=""
                    role="presentation"
-                   src="./static/rapture/resources/icons/x32/sonatype.png"/>
+                   src="./static/rapture/resources/icons/x32/tianhe.png"/>
               <span>{UIStrings.WELCOME.MENU.text}</span>
             </NxH1>
             <NxPageTitle.Subtitle>{UIStrings.WELCOME.MENU.description}</NxPageTitle.Subtitle>
