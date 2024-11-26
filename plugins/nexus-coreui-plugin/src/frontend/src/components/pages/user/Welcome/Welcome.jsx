@@ -10,9 +10,9 @@
  * of Sonatype, Inc. Apache Maven is a trademark of the Apache Software Foundation. M2eclipse is a trademark of the
  * Eclipse Foundation. All other trademarks are the property of their respective owners.
  */
-import React, {useEffect, useRef, useState} from 'react';
-import {useMachine} from '@xstate/react';
-import {ExtJS, toURIParams, getVersionMajorMinor} from '@sonatype/nexus-ui-plugin';
+import React, { useEffect, useRef, useState } from 'react';
+import { useMachine } from '@xstate/react';
+import { ExtJS, toURIParams, getVersionMajorMinor } from '@sonatype/nexus-ui-plugin';
 import {
   NxLoadWrapper,
   NxPageMain,
@@ -50,33 +50,33 @@ const iframeDefaultHeight = 1000;
 const iframePadding = 48;
 
 export default function Welcome() {
-  const [state, send] = useMachine(welcomeMachine, {devtools: true}),
-      [iframeHeight, setIframeHeight] = useState(iframeDefaultHeight),
-      ref = useRef(),
-      loading = state.matches('loading'),
-      error = state.matches('error') ? state.context.error : null,
-      proxyDownloadNumberParams = state.context.data?.proxyDownloadNumberParams;
+  const [state, send] = useMachine(welcomeMachine, { devtools: true }),
+    [iframeHeight, setIframeHeight] = useState(iframeDefaultHeight),
+    ref = useRef(),
+    loading = state.matches('loading'),
+    error = state.matches('error') ? state.context.error : null,
+    proxyDownloadNumberParams = state.context.data?.proxyDownloadNumberParams;
 
   const user = ExtJS.useUser(),
-      status = ExtJS.useStatus(),
-      iframeProps = {
-        version: status.version,
-        versionMm: getVersionMajorMinor(status.version),
-        edition: status.edition,
-        usertype: getUserType(user),
-        daysToExpiry: ExtJS.useLicense().daysToExpiry,
-        databaseType: getDatabaseType()
-      },
-      isAdmin = user?.administrator;
+    status = ExtJS.useStatus(),
+    iframeProps = {
+      version: status.version,
+      versionMm: getVersionMajorMinor(status.version),
+      edition: status.edition,
+      usertype: getUserType(user),
+      daysToExpiry: ExtJS.useLicense().daysToExpiry,
+      databaseType: getDatabaseType()
+    },
+    isAdmin = user?.administrator;
 
   function load() {
-    send({type: 'LOAD'});
+    send({ type: 'LOAD' });
   }
 
   const onLoad = () => {
     if (ref.current?.contentWindow) {
       setIframeHeight(
-          ref.current.contentWindow.document.body.scrollHeight + iframePadding
+        ref.current.contentWindow.document.body.scrollHeight + iframePadding
       )
     }
   };
@@ -102,25 +102,25 @@ export default function Welcome() {
   }, []);
 
   return (
-      <NxPageMain className="nx-viewport-sized nxrm-welcome">
-        <NxPageTitle className="nxrm-welcome__page-title">
-          <NxPageTitle.Headings>
-            <NxH1>
-              {/* Empty alt per WHATWG-HTML § 4.8.4.4.4 paragraph 6
+    <NxPageMain className="nx-viewport-sized nxrm-welcome">
+      <NxPageTitle className="nxrm-welcome__page-title">
+        <NxPageTitle.Headings>
+          <NxH1>
+            {/* Empty alt per WHATWG-HTML § 4.8.4.4.4 paragraph 6
               * https://html.spec.whatwg.org/multipage/images.html#a-short-phrase-or-label-with-an-alternative-graphical-representation:-icons,-logos
               * NOTE: the role here should be redundant per https://www.w3.org/TR/html-aria/#el-img-empty-alt but
               * the RTL queries don't appear to recognize that nuance
               */}
-              <img className="nxrm-welcome__logo"
-                   alt=""
-                   role="presentation"
-                   src="./static/rapture/resources/icons/x32/tianhe.png"/>
-              <span>{UIStrings.WELCOME.MENU.text}</span>
-            </NxH1>
-            <NxPageTitle.Subtitle>{UIStrings.WELCOME.MENU.description}</NxPageTitle.Subtitle>
-          </NxPageTitle.Headings>
-        </NxPageTitle>
-        <NxLoadWrapper loading={loading} error={error} retryHandler={load}>
+            <img className="nxrm-welcome__logo"
+              alt=""
+              role="presentation"
+              src="./static/rapture/resources/icons/x32/tianhe.png" />
+            <span>{UIStrings.WELCOME.MENU.text}</span>
+          </NxH1>
+          <NxPageTitle.Subtitle>{UIStrings.WELCOME.MENU.description}</NxPageTitle.Subtitle>
+        </NxPageTitle.Headings>
+      </NxPageTitle>
+      {/* <NxLoadWrapper loading={loading} error={error} retryHandler={load}>
           <div className="nxrm-welcome__outreach nx-viewport-sized__scrollable">
             <MaliciousRiskOnDisk/>
             {isAdmin && <UsageMetrics/>}
@@ -139,7 +139,10 @@ export default function Welcome() {
                 />
             }
           </div>
-        </NxLoadWrapper>
-      </NxPageMain>
+        </NxLoadWrapper> */}
+      <div className="nxrm-welcome__outreach nx-viewport-sized__scrollable">
+        <OutreachActions />
+      </div>
+    </NxPageMain>
   );
 }

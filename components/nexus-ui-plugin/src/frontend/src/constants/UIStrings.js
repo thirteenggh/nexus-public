@@ -45,7 +45,7 @@ export default {
 
   ERROR: {
     DECIMAL: 'This field must not contain decimal values',
-    FIELD_REQUIRED: 'This field is required',
+    FIELD_REQUIRED: '此输入框为必填项',
     HOSTNAME: 'Hostname must be valid',
     NAN: 'This field must contain a numeric value',
     MIN: (min) => `The minimum value for this field is ${min}`,

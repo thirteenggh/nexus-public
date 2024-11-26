@@ -25,7 +25,7 @@ const {SETTINGS: {SAVE_BUTTON_LABEL, DISCARD_BUTTON_LABEL}} = UIStrings;
  * @since 3.24
  */
 export default class TestUtils {
-  static REQUIRED_MESSAGE = 'This field is required';
+  static REQUIRED_MESSAGE = '此输入框为必填项';
   static VALIDATION_ERRORS_MESSAGE = 'Validation errors are present';
   static NO_CHANGES_MESSAGE = 'There are no changes';
   static THERE_WERE_ERRORS = 'There were validation errors.';

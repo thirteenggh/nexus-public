@@ -40,12 +40,12 @@ Ext.define('NX.onboarding.app.PluginStrings', {
       Description: '<p>该向导将帮助您完成所需的设置任务。</p>',
     },
     'NX.onboarding.view.OnboardingCompleteScreen': {
-      Title: '完成！',
+      Title: '最后一步！',
       Description: '<p>设置任务已完成，请尽情使用天河云的私有弹性云计算软件平台吧！</p>',
       Finish_Button: '完成'
     },
     'NX.onboarding.view.ChangeAdminPasswordScreen': {
-      Title: '请为管理员用户选择一个密码'
+      Title: '为管理员用户重置一个新密码'
     },
     'NX.onboarding.view.ConfigureAnonymousAccessScreen': {
       Title: '配置匿名访问',

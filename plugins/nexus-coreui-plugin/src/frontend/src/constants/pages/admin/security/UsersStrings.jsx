@@ -16,21 +16,21 @@ import {NxTextLink} from '@sonatype/react-shared-components';
 export default {
   USERS: {
     MENU: {
-      text: 'Users',
-      description: 'Manage users',
+      text: '用户',
+      description: '用户管理',
     },
     MODAL: {
-      TEXT: 'You must confirm your current password before you are able to change or update the password',
-      CHANGE_PASSWORD: 'Change Password',
-      NEXT: 'Next',
-      CONFIRM_PASSWORD: 'Confirm password',
-      NEW_PASSWORD: 'New password',
-      ADMIN_PASSWORD: 'Admin password',
-      CONFIRMING_ADMIN_PASSWORD: 'Confirming Admin Password',
+      TEXT: '必须先确认当前密码，才能更改新密码',
+      CHANGE_PASSWORD: '更改密码',
+      NEXT: '下一步',
+      CONFIRM_PASSWORD: '确认密码',
+      NEW_PASSWORD: '新密码',
+      ADMIN_PASSWORD: '管理员密码',
+      CONFIRMING_ADMIN_PASSWORD: '确认管理员密码',
       ERROR: {
-        MISSING_PASSWORD: 'Password was not supplied in the body of the request',
-        PERMISSION: 'The user does not have permission to perform the operation.',
-        NOT_FOUND: 'User not found in the system.'
+        MISSING_PASSWORD: '请求正文中未提供密码',
+        PERMISSION: '用户没有执行该操作的权限。',
+        NOT_FOUND: '系统中未找到用户。'
       }
     },
     LIST: {

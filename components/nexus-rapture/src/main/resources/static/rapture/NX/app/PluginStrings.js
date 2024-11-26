@@ -42,7 +42,7 @@ Ext.define('NX.app.PluginStrings', {
     Button_Close: '关闭',
     Button_Create: '创建',
     Button_Discard: '丢弃',
-    Button_Next: '下一个',
+    Button_Next: '下一步',
     Button_Save: '保存',
 
     Column_No_Data: '无数据',
@@ -187,7 +187,7 @@ Ext.define('NX.app.PluginStrings', {
     Wizard_Next: '@Button_Next',
     Wizard_Back: '@Button_Back',
     Wizard_Cancel: '@Button_Cancel',
-    Wizard_Screen_Progress: '{0} 的 {1}',
+    Wizard_Screen_Progress: '第{0}步，总共{1}步',
 
     // SearchBoxTip
     SearchBoxTip_ExactMatch: '使用 <b>""</b> 进行精准匹配 - "example"',
